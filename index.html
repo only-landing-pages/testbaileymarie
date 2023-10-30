@@ -1,5 +1,3 @@
----
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,15 +11,19 @@
     <div class="container">
         <h1>{{ site.welcome_message }}</h1>
         <p>{{ site.bio }}</p>
-        <!--
-<form action="{{ site.mailchimp_action_url }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank" novalidate>
-    <input type="email" value="" name="EMAIL" class="email-input" id="mce-EMAIL" placeholder="email address" required>
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="{{ site.mailchimp_hidden_name }}" tabindex="-1" value=""></div>
-    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="subscribe-button">
-</form>
--->
-
-        <a href="{{ site.gumroad_link }}" class="purchase-link">Come talk dirty to me here!</a>
+        
+        <!-- Commented form
+        <form action="{{ site.mailchimp_action_url }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank" novalidate>
+            <input type="email" value="" name="EMAIL" class="email-input" id="mce-EMAIL" placeholder="email address" required>
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="{{ site.mailchimp_hidden_name }}" tabindex="-1" value=""></div>
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="subscribe-button">
+        </form>
+        -->
+        
+        <a href="{{ site.gumroad_link }}" class="purchase-link">
+            <i class="fas fa-mouse-pointer"></i> Come talk dirty to me here!
+        </a>
+        
         <div class="social-links">
             {% for platform in site.social_platforms %}
                 <a href="{{ platform.url }}" class="social-link">
